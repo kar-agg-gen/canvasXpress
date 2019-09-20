@@ -3,8 +3,8 @@ context("canvasXpress colorKey for Numeric key")
 y = read.table(system.file("extdata", "cX-heatmapR-dat.txt.gz", package = "canvasXpress"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
 z = read.table(system.file("extdata", "cX-heatmapR-var.txt.gz", package = "canvasXpress"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
 
-sens.list <- setNames(as.list(c("red","green","blue","grey")), unique(as.character(z$Sens)))
-sens_list <- setNames(list(sens.list), "Sens")
+color.list <- setNames(as.list(c("red","green","blue","grey")), unique(as.character(z$Sens)))
+sens_list <- setNames(list(color.list), "Sens")
 
 test_that("ColorKey for numeric values", {
 
