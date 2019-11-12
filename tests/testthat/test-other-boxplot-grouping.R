@@ -20,7 +20,7 @@ test_that("boxplot - grouping", {
         colorBy = "prop2",
         shapeBy = "prop2",
         title = "Boxplot - grouping",
-        subtitle = "when colorby property is set to other then groupingFactors",
+        subtitle = "when colorby property is set to other than groupingFactors",
         xAxisTitle = "len"
     )
     check_ui_test(result)
