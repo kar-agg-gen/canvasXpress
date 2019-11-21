@@ -43,6 +43,8 @@ test_that("cXnetwork10", {
 
 test_that("cXnetwork11", {
     check_ui_test(cXnetwork11())
+
+    warning('labels are not readables if plot is not resized')
 })
 
 test_that("cXnetwork12", {
