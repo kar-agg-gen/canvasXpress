@@ -2,8 +2,8 @@ context("canvasXpress toolbar")
 
 test_that("Scatterplot toolbarType under", {
 
-    y = read.table(get_data("cX-spider-dat.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
-    z = read.table(get_data("cX-spider-var.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    y = read.table(get_data("cX-spider-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    z = read.table(get_data("cX-spider-var.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <-  canvasXpress(data           = y,
                             varAnnot       = z,
                             colorBy        = "Response",
@@ -43,7 +43,7 @@ test_that("Scatterplot toolbarType over", {
 
 test_that("Scatterplot toolbarType fixed", {
 
-    y = read.table(get_data("cX-loess2-dat.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    y = read.table(get_data("cX-loess2-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <- canvasXpress(data                    = y,
                            graphType               = "Scatter2D",
                            showConfidenceIntervals = TRUE,
@@ -59,9 +59,9 @@ test_that("Scatterplot toolbarType fixed", {
 
 test_that("Barplot segregated toolbarType under", {
 
-    y = read.table(get_data("cX-generic-dat.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
-    x = read.table(get_data("cX-generic-smp.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
-    z = read.table(get_data("cX-generic-var.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    y = read.table(get_data("cX-generic-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    x = read.table(get_data("cX-generic-smp.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    z = read.table(get_data("cX-generic-var.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <- canvasXpress(data               = y,
                            smpAnnot           = x,
                            varAnnot           = z,
@@ -75,8 +75,8 @@ test_that("Barplot segregated toolbarType under", {
 
 test_that("Barplot segregated toolbarType over", {
 
-    y = read.table(get_data("cX-simple-dat.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
-    x = read.table(get_data("cX-simple-smp.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    y = read.table(get_data("cX-simple-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    x = read.table(get_data("cX-simple-smp.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <- canvasXpress(data                      = y,
                            smpAnnot                  = x,
                            axisTitleFontStyle        = "italic",
@@ -96,8 +96,8 @@ test_that("Barplot segregated toolbarType over", {
 
 test_that("Barplot segregated toolbarType fixed", {
 
-    y = read.table(get_data("cX-iris-dat.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
-    x = read.table(get_data("cX-iris-smp.txt.gz"), header = TRUE, sep = "\t", quote = "",, row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    y = read.table(get_data("cX-iris-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
+    x = read.table(get_data("cX-iris-smp.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <-  canvasXpress(data               = y,
                             smpAnnot           = x,
                             axisTitleFontStyle = "italic",
