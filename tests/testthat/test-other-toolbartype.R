@@ -13,7 +13,7 @@ test_that("Scatterplot toolbarType under", {
                             legendPosition = "topRight",
                             spiderBy       = "Subject",
                             theme          = "CanvasXpress",
-                            title          = "ScatterPlot  - toolbarType: Under",
+                            title          = "ScatterPlot  - toolbarType: under",
                             xAxis          = list("Weeks"),
                             yAxis          = list("Change From Baseline %"),
                             toolbarType    =  "under"
@@ -34,7 +34,7 @@ test_that("Scatterplot toolbarType over", {
                             theme                   = "CanvasXpress",
                             xAxis                   = list("wt"),
                             yAxis                   = list("mpg"),
-                            title                   =  "ScatterPlot - toolbarType: Over",
+                            title                   =  "ScatterPlot - toolbarType: over",
                             afterRender             = list(list("addRegressionLine", list("cyl"))),
                             toolbarType             =  "over"
     )
