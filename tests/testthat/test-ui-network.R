@@ -28,7 +28,7 @@ test_that("cXnetwork5", {
 test_that("cXnetwork6", {
     check_ui_test(cXnetwork6())
 
-    warning("Plot get flipped on zoom out")
+    warning("Plot gets flipped on the zoom out")
 })
 
 test_that("cXnetwork7", {
