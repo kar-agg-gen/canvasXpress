@@ -1,4 +1,4 @@
-context("canvasXpress toolbar")
+context("canvasXpress toolbarType")
 
 test_that("Scatterplot toolbarType under", {
 
