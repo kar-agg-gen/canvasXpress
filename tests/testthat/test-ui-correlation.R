@@ -12,5 +12,5 @@ test_that("cXcorrelation2", {
 test_that("cXcorrelation3", {
     check_ui_test(cXcorrelation3())
 
-    warning("Plot labels ordering does not get back to initial position by clicking on box.")
+    warning("Clicking on any boxes after ordering labels will throw JS console errors")
 })
