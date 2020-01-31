@@ -4,13 +4,13 @@ context("canvasXpress Web Charts - Chord")
 test_that("cXchord1", {
     check_ui_test(cXchord1())
 
-    warning("Hovering over legend  fade complete plot")
+    warning("Hovering over legend fade complete plot")
 })
 
 test_that("cXchord2", {
     check_ui_test(cXchord2())
 
-    warning("Hovering over legend  fade complete plot")
+    warning("Hovering over legend fade complete plot")
 })
 
 test_that("cXchord3", {
