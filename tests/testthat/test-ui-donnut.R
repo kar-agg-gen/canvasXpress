@@ -7,4 +7,6 @@ test_that("cXdonut1", {
 
 test_that("cXdonut2", {
     check_ui_test(cXdonnut2())
+
+    warning("Clicking on legend misplace the labels on chart")
 })
