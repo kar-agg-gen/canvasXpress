@@ -64,5 +64,5 @@ test_that("differentiated groups in boxplot 3", {
                            afterRender             = list(list("pivotX", list("supp"))))
 
     check_ui_test(result)
-    warning('Data points are appearing on the chart are too small, unless it is resized manually or refreshed')
+    warning('Data points appearing on the chart are too small, unless it is resized manually or refreshed')
 })
