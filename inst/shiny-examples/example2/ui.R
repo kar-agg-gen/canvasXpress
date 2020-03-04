@@ -37,8 +37,8 @@ shinyUI(fluidPage(
                selectizeInput(inputId  = "genesSel",
                               label    = HTML("Gene(s):&nbsp;"),
                               width    = "100%",
-                              choices  = g_geneChoices,
-                              selected = g_geneChoices[1:2],
+                              choices  = NULL,
+                              selected = NULL,
                               multiple = TRUE),
                htmlOutput("genes_plot"))
     )
