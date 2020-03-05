@@ -1,8 +1,4 @@
 shinyServer(function(input, output, session) {
-    updateSelectizeInput(session, "genesSel",
-                         choices  = g_geneChoices,
-                         selected = g_geneChoices[1:2],
-                         server   = TRUE)
 
     levels_choices <- reactive({
         levels <- NULL
@@ -29,7 +25,7 @@ shinyServer(function(input, output, session) {
                 adj_pval         <- mapply("*", lapply(top_ranked_genes[colnames(top_ranked_genes) == "adj.P.Val"], log2),-1)
 
                 data <- as.matrix(data.frame(fold_change, adj_pval))
-                rownames(data) <- g_GSE9750$z$Name[g_GSE9750$z$vars %in% rownames(data)]
+                rownames(data) <- names(g_geneChoices[g_geneChoices %in% rownames(data)])
                 cxplot <- canvasXpress(
                     data         = data,
                     graphType    = "Scatter2D",
@@ -52,17 +48,15 @@ shinyServer(function(input, output, session) {
 
         if (!is.null(input$factorSel) && (input$factorSel != "") &&
             !is.null(input$genesSel)  && (input$genesSel != "")) {
-
-            genes_selected <- g_GSE9750$z[g_GSE9750$z$Symbol %in% input$genesSel, c("Name","Symbol")]
-            data           <- as.matrix(g_GSE9750$y[rownames(genes_selected), , drop = F])
-            rownames(data) <- genes_selected$Name
+            data  <- as.matrix(g_GSE9750$y[input$genesSel, , drop = F])
+            rownames(data) <- names(g_geneChoices[g_geneChoices %in% input$genesSel])
 
             cxplot <- canvasXpress(
                 data            = data,
                 smpAnnot        = g_GSE9750$x,
                 graphType       = "Boxplot",
                 groupingFactors = list(input$factorSel),
-                title           = glue("{input$factorSel}: {glue_collapse(gsub(' /// ', ';', input$genesSel), sep = ', ')}"),
+                title           = glue("{input$factorSel}: {glue_collapse(names(g_geneChoices[g_geneChoices %in% input$genesSel]), sep = ', ')}"),
                 width           = "100%")
         }
 
