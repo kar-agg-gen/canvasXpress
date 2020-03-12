@@ -18,7 +18,6 @@ test_that("Barplot customEvents", {
                                             t.showInfoSpan(e, o.display);
                                         };
                                     };}}")
-
     result <-  canvasXpress(
         data                    = y,
         smpAnnot                = x,
