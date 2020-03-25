@@ -15,4 +15,6 @@ test_that("cXoncoprint3", {
 
 test_that("cXoncoprint4", {
     check_ui_test(cXoncoprint4())
+
+    warning("tooltip values are differernt then web example. user may find NAN values instead of zeros (0)")
 })
