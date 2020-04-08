@@ -16,5 +16,6 @@ test_that("cXoncoprint3", {
 test_that("cXoncoprint4", {
     check_ui_test(cXoncoprint4())
 
-    warning("tooltip values are differernt then web example. user may find NAN values instead of zeros (0)")
+    warning("The values on Tooltips are different from web. In the R version, there are NaN values while the web has zeroes. ",
+             "This is due to the differences in the underlying data")
 })
