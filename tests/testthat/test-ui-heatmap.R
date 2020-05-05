@@ -43,7 +43,7 @@ test_that("cXheatmap9", {
 test_that("cXheatmap10", {
     check_ui_test(cXheatmap10())
 
-    message('The plot points fade on clicking the legends - working as designed')
+    message('Plot points all fade on selecting shapeBy and sizeBy legend items - working as designed.')
 })
 
 test_that("cXheatmap11", {
