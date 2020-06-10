@@ -5,7 +5,6 @@ context("canvasXpress Web Charts - BarLine")
 # In barline plots, the grouping and then a subsequent ungrouping by a variable
 # results in re-ordering of the category labels and the initial ordering is lost.
 # Chart will need to be refreshed to get the original order of categories.
-# This is a known issue.
 #--------------------------------------------------------------------
 
 
