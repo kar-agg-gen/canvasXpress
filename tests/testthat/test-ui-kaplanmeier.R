@@ -26,7 +26,8 @@ test_that("cXkaplanmeier4", {
     check_ui_test(cXkaplanmeier4())
 
     warning('Generated test function has incorrect afterRender list')
-    # afterRender=list(list("addKaplanMeierCurve", list('Survival','Survival-Censor')))
+    # afterRender=list(list("addKaplanMeierCurve", list('Survival','Survival-Censor')), list("addKaplanMeierCurve", list('Survival2','Survival2-Censor'))
+
 })
 
 test_that("cXkaplanmeier5", {
