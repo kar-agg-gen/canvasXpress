@@ -52,7 +52,7 @@ test_that("cXlayout12", {
     warning("Colors for drug are different, two pieces are green, but one should be orange")
 
     warning('Generated test function has incorrect afterRender list')
-    # afterRender=list(list("addKaplanMeierCurve", list('Time','Censor')))
+    # afterRender=list("addKaplanMeierCurve", list('Survival','Survival-Censor'))
 })
 
 test_that("cXlayout13", {

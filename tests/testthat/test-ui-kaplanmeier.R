@@ -19,14 +19,14 @@ test_that("cXkaplanmeier3", {
     check_ui_test(cXkaplanmeier3())
 
     warning('Generated test function has incorrect afterRender list')
-    # afterRender=list(list("addKaplanMeierCurve", list('Time','Censor')))
+    # afterRender=list(list("addKaplanMeierCurve", list('Survival','Survival-Censor')))
 })
 
 test_that("cXkaplanmeier4", {
     check_ui_test(cXkaplanmeier4())
 
     warning('Generated test function has incorrect afterRender list')
-    # afterRender=list(list("addKaplanMeierCurve", list('Time','Censor')))
+    # afterRender=list(list("addKaplanMeierCurve", list('Survival','Survival-Censor')))
 })
 
 test_that("cXkaplanmeier5", {
@@ -36,5 +36,5 @@ test_that("cXkaplanmeier5", {
     warning("Colors for drug are different, two pieces are green, but one should be orange")
 
     warning('Generated test function has incorrect afterRender list')
-    # afterRender=list(list("addKaplanMeierCurve", list('Time','Censor')))
+    # afterRender=list(list("addKaplanMeierCurve", list('Survival','Survival-Censor')))
 })
