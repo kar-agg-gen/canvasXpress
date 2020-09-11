@@ -140,7 +140,7 @@ test_that("segregated Boxplot decoration label position", {
 })
 
 test_that("precalculated barplot - annotations", {
-    precalc.data <- data.frame(mean = c(5, 50, 250, 100, 150),
+    precalc.data <- data.frame(mean  = c(5, 50, 250, 100, 150),
                                stdev = c(20, 10, 20, 15, 15),
                                stringsAsFactors = F)
     precalc.data1   <- as.data.frame(t(precalc.data))
@@ -172,7 +172,6 @@ test_that("precalculated barplot - annotations", {
                                                                            variable = "precalculated BarChart",
                                                                            sample   = "Group4",
                                                                            y        = 0.53))),
-
                            title                 = "Annotations for Precalculated Barplot without smpAnnot",
                            titleScaleFontFactor  = 0.5)
 
