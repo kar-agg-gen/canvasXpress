@@ -167,7 +167,6 @@ test_that("precalculated barplot - annotations", {
                                                                            sample   = "Group3",
                                                                            y        = 0.05),
                                                                       list(fontSize = 10,
-                                                                           smpAnnot = smp.data,
                                                                            text     = "Group4",
                                                                            type     = "annotation",
                                                                            variable = "precalculated BarChart",
