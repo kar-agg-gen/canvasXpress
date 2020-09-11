@@ -140,13 +140,13 @@ test_that("segregated Boxplot decoration label position", {
 })
 
 test_that("precalculated barplot - annotations", {
-    precalc.data <- data.frame(mean = c(5, 50, 250, 100, NA),
-                               stdev = c(20, 10, 20, 15, NA),
+    precalc.data <- data.frame(mean = c(5, 50, 250, 100, 150),
+                               stdev = c(20, 10, 20, 15, 15),
                                stringsAsFactors = F)
     precalc.data1   <- as.data.frame(t(precalc.data))
     precalc.data2   <- as.data.frame(t(precalc.data))
 
-    colnames(precalc.data1) <- c("Group1", "Group2", "Group3", "Group4", "Missing")
+    colnames(precalc.data1) <- c("Group1", "Group2", "Group3", "Group4", "Group5")
     colnames(precalc.data2) <- c("Group1", "Group2", "Group3", "Group1", "Group2")
 
     smp.data <- matrix(data     = c("Lev1", "Lev1", "Lev1", "Lev2", "Lev2"),
@@ -173,7 +173,7 @@ test_that("precalculated barplot - annotations", {
                                                                            sample   = "Group4",
                                                                            y        = 0.53))),
 
-                           title                 = "Precalculated barplot without smpAnnot- annotations",
+                           title                 = "Annotations for Precalculated Barplot without smpAnnot",
                            titleScaleFontFactor  = 0.5)
 
     check_ui_test(result)
@@ -201,7 +201,7 @@ test_that("precalculated barplot - annotations", {
                                                                            variable = "precalculated BarChart",
                                                                            sample   = "Group1",
                                                                            y        = 0.53))),
-                           title                 = "Precalculated barplot with smpAnnot- annotations ",
+                           title                 = "Annotations for Precalculated Barplot with smpAnnot",
                            titleScaleFontFactor  = 0.5)
 
     check_ui_test(result)
