@@ -206,7 +206,7 @@ test_that("precalculated barplot - annotations", {
     check_ui_test(result)
 })
 
-test_that("segregated and ovelayed precalculated barplot - annotations", {
+test_that("segregated and overlayed precalculated barplot - annotations", {
     precalc.data <- data.frame(mean  = c(5, 50, 250, 100, 150, 100, 200, 150, 100),
                                stdev = c(20, 10, 20, 15, 15, 10, 20, 15, 15),
                                stringsAsFactors = F)
@@ -255,7 +255,7 @@ test_that("segregated and ovelayed precalculated barplot - annotations", {
                                                                            variable = "precalculated BarChart",
                                                                            sample   = "Group4",
                                                                            y        = 0.52))),
-                           title                 = "Annotations for segregated and ovelayed precalculated barplot",
+                           title                 = "Annotations for segregated and overlayed precalculated barplot",
                            titleScaleFontFactor  = 0.5)
 
     check_ui_test(result)
