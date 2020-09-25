@@ -14,16 +14,16 @@ test_that("segregated barplot duplicated labels", {
     rownames(smp_data) <- colnames(data) <- sample_names
 
     result <- canvasXpress(
-        data                      = data,
-        smpAnnot                  = smp_data,
-        colorBy                   = "IC50",
-        graphOrientation          = "vertical",
-        graphType                 = "Bar",
-        smpOverlays               = list("Drug Sensitivity"),
-        segregateSamplesBy        = list("Gene"),
-        smpTitle                  = "Cell Lines",
-        title                     = "Duplicated labels should appear correct for each Gene",
-        xAxis2Show                = FALSE
+        data               = data,
+        smpAnnot           = smp_data,
+        colorBy            = "IC50",
+        graphOrientation   = "vertical",
+        graphType          = "Bar",
+        smpOverlays        = list("Drug Sensitivity"),
+        segregateSamplesBy = list("Gene"),
+        smpTitle           = "Cell Lines",
+        title              = "Duplicated labels should appear correct for each Gene",
+        xAxis2Show         = FALSE
     )
     check_ui_test(result)
 })
@@ -34,15 +34,15 @@ test_that("barplot duplicated labels", {
     rownames(smp_data) <- colnames(data) <- sample_names
 
     result <- canvasXpress(
-        data                      = data,
-        smpAnnot                  = smp_data,
-        colorBy                   = "IC50",
-        graphOrientation          = "vertical",
-        graphType                 = "Bar",
-        smpOverlays               = list("Drug Sensitivity"),
-        smpTitle                  = "Cell Lines",
-        title                     = "Duplicated labels should appear correct",
-        xAxis2Show                = FALSE
+        data             = data,
+        smpAnnot         = smp_data,
+        colorBy          = "IC50",
+        graphOrientation = "vertical",
+        graphType        = "Bar",
+        smpOverlays      = list("Drug Sensitivity"),
+        smpTitle         = "Cell Lines",
+        title            = "Duplicated labels should appear correct",
+        xAxis2Show       = FALSE
     )
     check_ui_test(result)
 })

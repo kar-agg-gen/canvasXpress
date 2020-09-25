@@ -17,12 +17,12 @@ test_that("barplot line color", {
 test_that("barplot annotations color", {
     y <- read.table(get_data( "cX-basic2-dat.txt.gz"), header = TRUE, sep = "\t", quote = "", row.names = 1, fill = TRUE, check.names = FALSE, stringsAsFactors = FALSE)
     result <- canvasXpress(
-        data                    = y,
-        graphType               = "Bar",
-        graphOrientation        = "vertical",
-        title                   = "Barplot - Annotations (Sample1: Blue, Sample2: Green)",
-        decorations             = list(marker = list(list(fontSize = 15, sample = "Sample1", color = "blue", text = "Blue Text", type = "annotation", variable = "Variable1"),
-                                                     list(fontSize = 15, sample = "Sample2", color = "green", text = "Green Text", type = "annotation", variable = "Variable1")))
+        data             = y,
+        graphType        = "Bar",
+        graphOrientation = "vertical",
+        title            = "Barplot - Annotations (Sample1: Blue, Sample2: Green)",
+        decorations      = list(marker = list(list(fontSize = 15, sample = "Sample1", color = "blue", text = "Blue Text", type = "annotation", variable = "Variable1"),
+                                              list(fontSize = 15, sample = "Sample2", color = "green", text = "Green Text", type = "annotation", variable = "Variable1")))
     )
     check_ui_test(result)
 })
