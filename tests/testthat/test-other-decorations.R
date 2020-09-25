@@ -207,14 +207,14 @@ test_that("precalculated barplot - annotations", {
 })
 
 test_that("segregated and overlayed precalculated barplot - annotations", {
-    precalc.data <- data.frame(mean  = c(5, 50, 250, 100, 150, 100, 200, 150, 100),
-                               stdev = c(20, 10, 20, 15, 15, 10, 20, 15, 15),
+    precalc.data <- data.frame(mean  = c(100, 200, 150, 100, 50, 80, 250, 100, 150),
+                               stdev = c(10, 20, 15, 15, 20, 10, 20, 15, 15),
                                stringsAsFactors = F)
     precalc.data           <- as.data.frame(t(precalc.data))
-    colnames(precalc.data) <- c("Group1", "Group2", "Group3", "Group1", "Group2", "Group3", "Group4", "Group3", "Group4")
+    colnames(precalc.data) <- c("Group1", "Group2", "Group1", "Group2", "Group2", "Group3", "Group4", "Group3", "Group4")
 
-    smp.data <- matrix(data     = c("Lev1", "Lev1", "Lev1", "Lev1", "Lev1", "Lev2", "Lev2", "Lev2", "Lev2",
-                                    "Proj1", "Proj1", "Proj1", "Proj2", "Proj2", "Proj1", "Proj1", "Proj2", "Proj2"),
+    smp.data <- matrix(data     = c("Lev1", "Lev1", "Lev1", "Lev1", "Lev2", "Lev2", "Lev2", "Lev2", "Lev2",
+                                    "Proj1", "Proj1", "Proj2", "Proj2", "Proj1", "Proj1", "Proj1", "Proj2", "Proj2"),
                        ncol     = 2,
                        dimnames = list(colnames(precalc.data), c("level", "Project")))
 
@@ -232,29 +232,36 @@ test_that("segregated and overlayed precalculated barplot - annotations", {
                                                                            scope    = list("Lev1", "Proj1"),
                                                                            type     = "annotation",
                                                                            variable = "precalculated BarChart",
-                                                                           sample   = "Group2",
-                                                                           y        = 0.68),
+                                                                           sample   = "Group1",
+                                                                           y        = 0.65),
                                                                       list(fontSize = 10,
                                                                            text     = "(Lev1,Proj2)",
                                                                            scope    = list("Lev1", "Proj2"),
                                                                            type     = "annotation",
                                                                            variable = "precalculated BarChart",
+                                                                           sample   = "Group1",
+                                                                           y        = 0.44),
+                                                                      list(fontSize = 10,
+                                                                           text     = "(Lev2,Proj1)",
+                                                                           scope    = list("Lev2", "Proj1"),
+                                                                           type     = "annotation",
+                                                                           variable = "precalculated BarChart",
                                                                            sample   = "Group2",
-                                                                           y        = 0.36),
+                                                                           y        = 0.82),
                                                                       list(fontSize = 10,
                                                                            text     = "(Lev2,Proj1)",
                                                                            scope    = list("Lev2", "Proj1"),
                                                                            type     = "annotation",
                                                                            variable = "precalculated BarChart",
                                                                            sample   = "Group4",
-                                                                           y        = 0.20),
+                                                                           y        = 0.05),
                                                                       list(fontSize = 10,
                                                                            text     = "(Lev2,Proj2)",
                                                                            scope    = list("Lev2", "Proj2"),
                                                                            type     = "annotation",
                                                                            variable = "precalculated BarChart",
                                                                            sample   = "Group4",
-                                                                           y        = 0.52))),
+                                                                           y        = 0.44))),
                            title                 = "Annotations for segregated and overlayed precalculated barplot",
                            titleScaleFontFactor  = 0.5)
 
