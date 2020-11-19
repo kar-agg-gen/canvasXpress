@@ -24,9 +24,9 @@ fluidPage(
             uiOutput("selectGenes"))),
     fluidRow(
         column(width = 6,
-               canvasXpressOutput("profilePlot")),
+               htmlOutput("profilePlot")),
         column(width = 6,
-               canvasXpressOutput("genePlot"))),
+               htmlOutput("genePlot"))),
     br(), hr(),
     fluidRow(
         column(width = 6,
@@ -39,7 +39,7 @@ fluidPage(
                p(""))),
     fluidRow(
         column(width = 6,
-               canvasXpressOutput("comparePlot")),
+               htmlOutput("comparePlot")),
         column(width = 6,
-               canvasXpressOutput("volcanoPlot"))))
+               htmlOutput("volcanoPlot"))))
 )
