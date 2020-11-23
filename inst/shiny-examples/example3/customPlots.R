@@ -16,7 +16,7 @@ render_plot <- function(cxplot, textMessage) {
     }
 }
 
-## Custome plot functions
+## Custom plot functions
 profilePlot <- function(df, title, subtitle) {
 
     ## Need a NLP column for sizing
