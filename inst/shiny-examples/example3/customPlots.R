@@ -78,7 +78,7 @@ profilePlot <- function(df, title, subtitle) {
         subtitleScaleFontFactor = 0.5,
         showAnimation           = FALSE,
         width                   = "100%",
-        events                  = JS("{'select': function(o, e, t){if (o != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
+        events                  = JS("{'select': function(o, e, t){if (o != null && o.y != null && o.y.vars != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
     )
 }
 
@@ -147,7 +147,7 @@ volcanoPlot <- function(df, title, subtitle) {
         subtitleScaleFontFactor = 0.5,
         showAnimation           = FALSE,
         width                   = "100%",
-        events                  = JS("{'select': function(o, e, t){if (o != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
+        events                  = JS("{'select': function(o, e, t){if (o != null && o.y != null && o.y.vars != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
     )
 }
 
@@ -229,7 +229,7 @@ comparePlot <- function(df, title, subtitle) {
         subtitleScaleFontFactor = 0.5,
         showAnimation           = FALSE,
         width                   = "100%",
-        events                  = JS("{'select': function(o, e, t){if (o != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
+        events                  = JS("{'select': function(o, e, t){if (o != null && o.y != null && o.y.vars != null) { if (o.y.vars.length != 0) { var g = $('#genes'); g[0].selectize.clear(); g[0].selectize.addItems(o.y.vars);}}; }}")
     )
 }
 
